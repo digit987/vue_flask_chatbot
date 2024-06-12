@@ -5,8 +5,8 @@
     <div v-for="(message, index) in messages" :key="index" class="message">
       {{ message }}
     </div>
-    <input v-model="newMessage" @keyup.enter="sendMessage" placeholder="Type a message...">
-    <button @click="fetchData">Fetch Data from Flask Backend</button>
+    <input v-model="newMessage" @keyup.enter="sendMessage" placeholder="Ask Anything">
+    <button @click="fetchData">Ask Anything</button>
     <div v-if="flaskData" class="flask-data">{{ flaskData }}</div>
   </div>
 </template>
