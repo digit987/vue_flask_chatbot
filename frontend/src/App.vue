@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Smile2Steps logo" src="./assets/logo.png">
+    <img alt="Smile2Steps logo" src="./assets/logo.jpeg">
     <span>Smile2Steps</span>
     <Chat />
   </div>
