@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Smile2Steps logo" src="./assets/logo.jpeg">
-    <span>Smile2Steps</span>
-    <Chat />
+    <!-- <img alt="Smile2Steps logo" src="./assets/logo.jpg"> 
+    <span>Smile2Steps</span> -->
+    <ChatWindow />
   </div>
 </template>
 
 <script>
-import Chat from './components/Chat.vue'
+import ChatWindow from './components/ChatWindow.vue'
 
 export default {
   name: 'App',
   components: {
-    Chat
+    ChatWindow
   }
 };
 </script>
