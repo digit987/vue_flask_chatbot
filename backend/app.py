@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from OpenAIInteraction import question_answer
+from openai_client import question_answer
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
