@@ -41,7 +41,7 @@ export default {
       if (this.newMessage.trim() !== '') {
         try {
           const requestBody = { message: this.newMessage };
-          const response = await fetch('http://localhost:5000/api/data', {
+          const response = await fetch('http://pyany123.pythonanywhere.com/api/data', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
