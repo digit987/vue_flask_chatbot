@@ -3,7 +3,7 @@ from flask_cors import CORS
 from rag_client import invoke_rag_chain
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://vue-flask-chatbot.netlify.app"}})
+CORS(app, resources={r"/api/*": {"origins": "https://smile2steps-chatbot.netlify.app"}})
 
 @app.route('/api/data', methods=['POST'])
 def get_data():
