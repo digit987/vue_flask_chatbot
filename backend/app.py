@@ -1,27 +1,12 @@
-from flask import Flask, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-import openai
+from OpenAIInteraction import question_answer
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://vue-flask-chatbot.netlify.app/"}})
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
 
-@app.route('/api/data')
-def question_answer(question):
-    #openai.api_key = ""
-
-    messages=[{"role": "user", "content": question}]
-
-    answer = openai.ChatCompletion.create(
-      model="gpt-4",
-      messages=messages,
-      temperature=0.5,
-      max_tokens=100,
-      top_p=1.0,
-      frequency_penalty=0.0,
-      presence_penalty=0.0
-    )
-
-    return jsonify({'message': answer['choices'][0]['message']['content']})
-
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/api/data', methods=['POST'])
+def get_data():
+    message = request.json.get('message')
+    response_message = jsonify({'message': question_answer(message)})
+    return response_message
