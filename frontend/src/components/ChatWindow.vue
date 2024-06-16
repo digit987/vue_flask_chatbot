@@ -41,7 +41,7 @@ export default {
       if (this.newMessage.trim() !== '') {
         try {
           const requestBody = { message: this.newMessage };
-          const response = await fetch('http://localhost:5000/api/data', {
+          const response = await fetch('https://pyany123.pythonanywhere.com/api/data', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -125,7 +125,7 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 20px;
-  margin-bottom: 10px; /* Reduced space between cards and messages container */
+  margin-bottom: 10px; /* Reduce space between cards and messages container */
 }
 
 .card {

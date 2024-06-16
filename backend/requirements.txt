@@ -8,6 +8,8 @@ langchain-core==0.2.5
 langchain-openai==0.1.8
 langchain-text-splitters==0.2.1
 openai==1.33.0
-PyPDF2==3.0.1
+pydantic==1.10.12
+pypdf==4.2.0
+python-dotenv==1.0.1
 tiktoken==0.7.0
 Werkzeug==3.0.1
