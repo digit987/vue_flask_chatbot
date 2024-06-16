@@ -11,7 +11,7 @@ from openai import OpenAI
 
 load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
-client = OpenAI(a
+client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
 
