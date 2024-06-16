@@ -93,7 +93,7 @@ export default {
 <style scoped>
 /* Component-specific styles */
 .container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
